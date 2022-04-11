@@ -107,12 +107,6 @@ public class BookControllerTest {
                 .andExpect(view().name("redirect:/showlibbooks"));
     }
 
-    @Test
-    public void deleteBookTest() throws Exception {
-        setup();
-        mockMvc.perform(get("/books/delete?bookId=12"))
-                .andExpect(MockMvcResultMatchers.status().is3xxRedirection())
-                .andExpect(view().name("redirect:/showlibbooks"));
-    }
+   
 
 }
